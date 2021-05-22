@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "places",
+  "info": {
+    "name": "place",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "city": {
+      "via": "places",
+      "model": "city"
+    },
+    "shortDescription": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "address": {
+      "type": "string"
+    },
+    "numberOfApproval": {
+      "type": "integer",
+      "private": false,
+      "default": 0
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "cult",
+        "history",
+        "tourism"
+      ],
+      "default": "history"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}
