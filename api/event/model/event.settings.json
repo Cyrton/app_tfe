@@ -1,0 +1,31 @@
+{
+    "kind": "collectionType",
+    "collectionName": "event",
+    "info": {
+      "name": "event",
+      "description": ""
+    },
+    "options": {
+      "increments": true,
+      "timestamps": true,
+      "draftAndPublish": true
+    },
+    "attributes": {
+      "name": {
+        "type": "string"
+      },
+      "city": {
+        "via": "event",
+        "model":"city"
+      },
+      "startTime": {
+        "required": true,
+        "type": "datetime"
+      },
+      "endTime": {
+        "type": "datetime",
+        "required": true
+      }
+    }
+  }
+  
