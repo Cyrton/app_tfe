@@ -65,6 +65,10 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "events": {
+      "via": "city",
+      "collection": "event"
     }
   }
 }
