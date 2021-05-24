@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "meets",
+  "info": {
+    "name": "meet"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "owner": {
+      "model": "app-user",
+      "via": "meets"
+    },
+    "place": {
+      "model": "place"
+    },
+    "city": {
+      "model": "city"
+    },
+    "startDate": {
+      "type": "date",
+      "required": true
+    },
+    "participens": {
+      "collection": "app-user"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

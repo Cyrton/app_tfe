@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/comments": {
+    "/meets": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Comment"
+                    "$ref": "#/components/schemas/Meet"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Comment"
+          "Meet"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Comment"
+                  "$ref": "#/components/schemas/Meet"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Comment"
+          "Meet"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewComment"
+                "$ref": "#/components/schemas/NewMeet"
               }
             }
           }
         }
       }
     },
-    "/comments/count": {
+    "/meets/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Comment"
+          "Meet"
         ],
         "parameters": []
       }
     },
-    "/comments/{id}": {
+    "/meets/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Comment"
+                  "$ref": "#/components/schemas/Meet"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Comment"
+          "Meet"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Comment"
+                  "$ref": "#/components/schemas/Meet"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Comment"
+          "Meet"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewComment"
+                "$ref": "#/components/schemas/NewMeet"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Comment"
+          "Meet"
         ],
         "parameters": [
           {
@@ -514,21 +514,54 @@
   },
   "components": {
     "schemas": {
-      "Comment": {
+      "Meet": {
         "required": [
           "id",
-          "title",
-          "description"
+          "startDate"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "title": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
+          "owner": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "googleId": {
+                "type": "string"
+              },
+              "picture": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "comments": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "meets": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           },
           "place": {
             "required": [
@@ -591,37 +624,72 @@
               }
             }
           },
-          "app_user": {
+          "city": {
             "required": [
-              "id"
+              "id",
+              "name",
+              "image",
+              "description",
+              "population",
+              "countryCode",
+              "address",
+              "shortDescription",
+              "type",
+              "imageGallery"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "email": {
-                "type": "string"
-              },
-              "googleId": {
-                "type": "string"
-              },
-              "picture": {
-                "type": "string"
-              },
               "name": {
                 "type": "string"
               },
-              "comments": {
+              "places": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "meets": {
+              "image": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "population": {
+                "type": "integer"
+              },
+              "countryCode": {
+                "type": "string"
+              },
+              "address": {
+                "type": "string"
+              },
+              "shortDescription": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string",
+                "enum": [
+                  "small",
+                  "medium",
+                  "large"
+                ]
+              },
+              "imageGallery": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
+              },
+              "events": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
               },
               "created_by": {
                 "type": "string"
@@ -631,28 +699,93 @@
               }
             }
           },
-          "published_at": {
+          "startDate": {
             "type": "string",
-            "format": "date-time"
-          }
-        }
-      },
-      "NewComment": {
-        "required": [
-          "title",
-          "description"
-        ],
-        "properties": {
+            "format": "date"
+          },
+          "participens": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "googleId": {
+                  "type": "string"
+                },
+                "picture": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "comments": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "meets": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "title": {
             "type": "string"
           },
           "description": {
             "type": "string"
           },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "NewMeet": {
+        "required": [
+          "startDate"
+        ],
+        "properties": {
+          "owner": {
+            "type": "string"
+          },
           "place": {
             "type": "string"
           },
-          "app_user": {
+          "city": {
+            "type": "string"
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "participens": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
             "type": "string"
           },
           "published_at": {
@@ -671,7 +804,7 @@
   },
   "tags": [
     {
-      "name": "Comment"
+      "name": "Meet"
     }
   ]
 }

@@ -582,6 +582,53 @@
                 }
               }
             }
+          },
+          "meets": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "startDate"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "owner": {
+                  "type": "string"
+                },
+                "place": {
+                  "type": "string"
+                },
+                "city": {
+                  "type": "string"
+                },
+                "startDate": {
+                  "type": "string"
+                },
+                "participens": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -600,6 +647,12 @@
             "type": "string"
           },
           "comments": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "meets": {
             "type": "array",
             "items": {
               "type": "string"
