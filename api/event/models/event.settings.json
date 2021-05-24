@@ -12,7 +12,8 @@
     },
     "attributes": {
       "title": {
-        "type": "string"
+        "type": "string",
+        "required": true
       },
       "color": {
         "type": "enumeration",
@@ -24,14 +25,16 @@
         "default": "0xFF0F8644"
       },
       "startDate": {
-        "type": "datetime"
+        "type": "datetime",
+        "required": true
       },
       "endDate": {
-        "type": "datetime"
+        "type": "datetime",
+        "required": true
       },
       "city": {
-        "model": "city",
-      "via": "events"
+        "via": "events",
+      "model": "city"
       }
     }
   }

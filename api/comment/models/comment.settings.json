@@ -20,8 +20,8 @@
         "required": true
       },
       "place": {
-        "model": "place",
-        "via": "comments"
+        "via": "comments",
+        "model": "place"
       },
       "app_user": {
         "via": "comments",

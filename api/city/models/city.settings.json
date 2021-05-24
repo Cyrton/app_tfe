@@ -12,7 +12,8 @@
   },
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "places": {
       "via": "city",
@@ -22,28 +23,33 @@
       "model": "file",
       "via": "related",
       "allowedTypes": [
-        "images",
         "files",
+        "images",
         "videos"
       ],
       "plugin": "upload",
-      "required": false,
+      "required": true,
       "pluginOptions": {}
     },
     "description": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     },
     "population": {
-      "type": "biginteger"
+      "type": "biginteger",
+      "required": true
     },
     "countryCode": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "address": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "shortDescription": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "type": {
       "type": "enumeration",
@@ -52,18 +58,19 @@
         "medium",
         "large"
       ],
-      "default": "small"
+      "default": "small",
+      "required": true
     },
     "imageGallery": {
       "collection": "file",
       "via": "related",
       "allowedTypes": [
-        "images",
         "files",
+        "images",
         "videos"
       ],
       "plugin": "upload",
-      "required": false,
+      "required": true,
       "pluginOptions": {}
     },
     "events": {
