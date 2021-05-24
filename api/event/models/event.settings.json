@@ -1,40 +1,31 @@
 {
-    "kind": "collectionType",
-    "collectionName": "events",
-    "info": {
-        "name": "event",
-        "description": ""
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "name": "event",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
     },
-    "options": {
-      "increments": true,
-      "timestamps": true,
-      "draftAndPublish": true
+    "startDate": {
+      "type": "datetime",
+      "required": true
     },
-    "attributes": {
-      "title": {
-        "type": "string",
-        "required": true
-      },
-      "color": {
-        "type": "enumeration",
-        "enum": [
-          "0xFF0F8644",
-          "0xFF0F8544",
-          "0xFF0F8744"
-        ],
-        "default": "0xFF0F8644"
-      },
-      "startDate": {
-        "type": "datetime",
-        "required": true
-      },
-      "endDate": {
-        "type": "datetime",
-        "required": true
-      },
-      "city": {
-        "via": "events",
+    "endDate": {
+      "type": "datetime",
+      "required": true
+    },
+    "city": {
+      "via": "events",
       "model": "city"
-      }
     }
   }
+}

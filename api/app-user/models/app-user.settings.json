@@ -1,31 +1,31 @@
 {
-    "kind": "collectionType",
-    "collectionName": "app_users",
-    "info": {
-      "name": "app_user",
-      "description": ""
+  "kind": "collectionType",
+  "collectionName": "app_users",
+  "info": {
+    "name": "app_user",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "email": {
+      "type": "string"
     },
-    "options": {
-      "increments": true,
-      "timestamps": true,
-      "draftAndPublish": false
+    "googleId": {
+      "type": "string"
     },
-    "attributes": {
-      "email": {
-        "type": "string"
-      },
-      "googleId": {
-        "type": "string"
-      },
-      "picture": {
-        "type": "string"
-      },
-      "name": {
-        "type": "string"
-      },
-      "comments": {
-        "via": "app_user",
-        "collection": "comment"
-      }
+    "picture": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "comments": {
+      "via": "app_user",
+      "collection": "comment"
     }
   }
+}

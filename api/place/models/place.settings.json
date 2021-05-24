@@ -34,7 +34,8 @@
     "numberOfApproval": {
       "type": "integer",
       "private": false,
-      "default": 0
+      "default": 0,
+      "required": true
     },
     "type": {
       "type": "enumeration",
@@ -50,8 +51,8 @@
       "model": "file",
       "via": "related",
       "allowedTypes": [
-        "images",
         "files",
+        "images",
         "videos"
       ],
       "plugin": "upload",

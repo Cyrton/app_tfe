@@ -1,31 +1,31 @@
 {
-    "kind": "collectionType",
-    "collectionName": "comments",
-    "info": {
-      "name": "Comment",
-      "description": ""
+  "kind": "collectionType",
+  "collectionName": "comments",
+  "info": {
+    "name": "Comment",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
     },
-    "options": {
-      "increments": true,
-      "timestamps": true,
-      "draftAndPublish": true
+    "description": {
+      "type": "string",
+      "required": true
     },
-    "attributes": {
-      "title": {
-        "type": "string",
-        "required": true
-      },
-      "description": {
-        "type": "string",
-        "required": true
-      },
-      "place": {
-        "via": "comments",
-        "model": "place"
-      },
-      "app_user": {
-        "via": "comments",
+    "place": {
+      "via": "comments",
+      "model": "place"
+    },
+    "app_user": {
+      "via": "comments",
       "model": "app-user"
-      }
     }
   }
+}

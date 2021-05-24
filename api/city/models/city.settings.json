@@ -32,7 +32,7 @@
       "pluginOptions": {}
     },
     "description": {
-      "type": "richtext",
+      "type": "text",
       "required": true
     },
     "population": {
