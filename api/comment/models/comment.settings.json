@@ -1,0 +1,31 @@
+{
+    "kind": "collectionType",
+    "collectionName": "comments",
+    "info": {
+      "name": "Comment",
+      "description": ""
+    },
+    "options": {
+      "increments": true,
+      "timestamps": true,
+      "draftAndPublish": true
+    },
+    "attributes": {
+      "title": {
+        "type": "string",
+        "required": true
+      },
+      "description": {
+        "type": "string",
+        "required": true
+      },
+      "place": {
+        "model": "place",
+        "via": "comments"
+      },
+      "app_user": {
+        "model": "app-user",
+        "via": "comments"
+      }
+    }
+  }
