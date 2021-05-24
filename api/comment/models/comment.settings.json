@@ -24,8 +24,8 @@
         "via": "comments"
       },
       "app_user": {
-        "model": "app-user",
-        "via": "comments"
+        "via": "comments",
+      "model": "app-user"
       }
     }
   }
