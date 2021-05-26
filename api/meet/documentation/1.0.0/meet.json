@@ -613,6 +613,9 @@
                   "type": "string"
                 }
               },
+              "audioDescription": {
+                "type": "string"
+              },
               "published_at": {
                 "type": "string"
               },
