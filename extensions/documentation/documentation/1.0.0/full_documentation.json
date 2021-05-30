@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "05/30/2021 3:24:33 PM"
+    "x-generation-date": "05/30/2021 6:43:35 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -6088,7 +6088,6 @@
                 "shortDescription",
                 "description",
                 "address",
-                "numberOfApproval",
                 "type",
                 "image"
               ],
@@ -6111,9 +6110,6 @@
                 "address": {
                   "type": "string"
                 },
-                "numberOfApproval": {
-                  "type": "integer"
-                },
                 "type": {
                   "type": "string",
                   "enum": [
@@ -6133,6 +6129,12 @@
                 },
                 "audioDescription": {
                   "type": "string"
+                },
+                "approval": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "published_at": {
                   "type": "string"
@@ -6435,7 +6437,6 @@
               "shortDescription",
               "description",
               "address",
-              "numberOfApproval",
               "type",
               "image"
             ],
@@ -6458,9 +6459,6 @@
               "address": {
                 "type": "string"
               },
-              "numberOfApproval": {
-                "type": "integer"
-              },
               "type": {
                 "type": "string",
                 "enum": [
@@ -6480,6 +6478,12 @@
               },
               "audioDescription": {
                 "type": "string"
+              },
+              "approval": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "published_at": {
                 "type": "string"
@@ -6760,7 +6764,6 @@
               "shortDescription",
               "description",
               "address",
-              "numberOfApproval",
               "type",
               "image"
             ],
@@ -6783,9 +6786,6 @@
               "address": {
                 "type": "string"
               },
-              "numberOfApproval": {
-                "type": "integer"
-              },
               "type": {
                 "type": "string",
                 "enum": [
@@ -6805,6 +6805,12 @@
               },
               "audioDescription": {
                 "type": "string"
+              },
+              "approval": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "published_at": {
                 "type": "string"
@@ -6992,7 +6998,6 @@
           "shortDescription",
           "description",
           "address",
-          "numberOfApproval",
           "type",
           "image"
         ],
@@ -7086,10 +7091,6 @@
           },
           "address": {
             "type": "string"
-          },
-          "numberOfApproval": {
-            "type": "integer",
-            "default": 0
           },
           "type": {
             "type": "string",
@@ -7270,6 +7271,49 @@
               }
             }
           },
+          "approval": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "googleId": {
+                  "type": "string"
+                },
+                "picture": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "comments": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "meets": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -7282,7 +7326,6 @@
           "shortDescription",
           "description",
           "address",
-          "numberOfApproval",
           "type"
         ],
         "properties": {
@@ -7301,10 +7344,6 @@
           "address": {
             "type": "string"
           },
-          "numberOfApproval": {
-            "type": "integer",
-            "default": 0
-          },
           "type": {
             "type": "string",
             "default": "history",
@@ -7315,6 +7354,12 @@
             ]
           },
           "comments": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "approval": {
             "type": "array",
             "items": {
               "type": "string"

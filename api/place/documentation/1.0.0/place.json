@@ -521,7 +521,6 @@
           "shortDescription",
           "description",
           "address",
-          "numberOfApproval",
           "type",
           "image"
         ],
@@ -615,10 +614,6 @@
           },
           "address": {
             "type": "string"
-          },
-          "numberOfApproval": {
-            "type": "integer",
-            "default": 0
           },
           "type": {
             "type": "string",
@@ -799,6 +794,49 @@
               }
             }
           },
+          "approval": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "googleId": {
+                  "type": "string"
+                },
+                "picture": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "comments": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "meets": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -811,7 +849,6 @@
           "shortDescription",
           "description",
           "address",
-          "numberOfApproval",
           "type"
         ],
         "properties": {
@@ -830,10 +867,6 @@
           "address": {
             "type": "string"
           },
-          "numberOfApproval": {
-            "type": "integer",
-            "default": 0
-          },
           "type": {
             "type": "string",
             "default": "history",
@@ -844,6 +877,12 @@
             ]
           },
           "comments": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "approval": {
             "type": "array",
             "items": {
               "type": "string"

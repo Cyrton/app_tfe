@@ -537,7 +537,6 @@
               "shortDescription",
               "description",
               "address",
-              "numberOfApproval",
               "type",
               "image"
             ],
@@ -560,9 +559,6 @@
               "address": {
                 "type": "string"
               },
-              "numberOfApproval": {
-                "type": "integer"
-              },
               "type": {
                 "type": "string",
                 "enum": [
@@ -582,6 +578,12 @@
               },
               "audioDescription": {
                 "type": "string"
+              },
+              "approval": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "published_at": {
                 "type": "string"

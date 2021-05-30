@@ -31,12 +31,6 @@
       "type": "string",
       "required": true
     },
-    "numberOfApproval": {
-      "type": "integer",
-      "private": false,
-      "default": 0,
-      "required": true
-    },
     "type": {
       "type": "enumeration",
       "enum": [
@@ -63,17 +57,20 @@
       "via": "place",
       "collection": "comment"
     },
-  "audioDescription": {
-    "model": "file",
-    "via": "related",
-    "allowedTypes": [
-      "images",
-      "files",
-      "videos"
-    ],
-    "plugin": "upload",
-    "required": false,
-    "pluginOptions": {}
-  }
+    "audioDescription": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "approval": {
+      "collection": "app-user"
+    }
   }
 }
