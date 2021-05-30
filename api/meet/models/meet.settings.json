@@ -2,12 +2,13 @@
   "kind": "collectionType",
   "collectionName": "meets",
   "info": {
-    "name": "meet"
+    "name": "meet",
+    "description": ""
   },
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "attributes": {
     "owner": {
