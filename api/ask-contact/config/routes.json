@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/ask-contacts",
+      "handler": "ask-contact.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ask-contacts/count",
+      "handler": "ask-contact.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ask-contacts/:id",
+      "handler": "ask-contact.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ask-contacts",
+      "handler": "ask-contact.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/ask-contacts/:id",
+      "handler": "ask-contact.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/ask-contacts/:id",
+      "handler": "ask-contact.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

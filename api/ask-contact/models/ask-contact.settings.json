@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ask_contacts",
+  "info": {
+    "name": "ask_contact"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "cityName": {
+      "type": "string",
+      "required": true
+    },
+    "cityRole": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
