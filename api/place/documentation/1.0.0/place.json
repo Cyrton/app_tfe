@@ -536,11 +536,9 @@
               "id",
               "name",
               "image",
-              "description",
               "population",
               "countryCode",
               "address",
-              "shortDescription",
               "type",
               "imageGallery"
             ],
@@ -837,6 +835,9 @@
               }
             }
           },
+          "deepLinkUri": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -887,6 +888,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "deepLinkUri": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

@@ -32,8 +32,7 @@
       "pluginOptions": {}
     },
     "description": {
-      "type": "text",
-      "required": true
+      "type": "richtext"
     },
     "population": {
       "type": "biginteger",
@@ -48,8 +47,7 @@
       "required": true
     },
     "shortDescription": {
-      "type": "string",
-      "required": true
+      "type": "richtext"
     },
     "type": {
       "type": "enumeration",

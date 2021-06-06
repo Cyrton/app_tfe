@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "05/30/2021 6:43:35 PM"
+    "x-generation-date": "06/06/2021 11:45:04 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -6064,11 +6064,9 @@
           "id",
           "name",
           "image",
-          "description",
           "population",
           "countryCode",
           "address",
-          "shortDescription",
           "type",
           "imageGallery"
         ],
@@ -6135,6 +6133,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "deepLinkUri": {
+                  "type": "string"
                 },
                 "published_at": {
                   "type": "string"
@@ -6355,11 +6356,9 @@
       "NewCity": {
         "required": [
           "name",
-          "description",
           "population",
           "countryCode",
           "address",
-          "shortDescription",
           "type"
         ],
         "properties": {
@@ -6485,6 +6484,9 @@
                   "type": "string"
                 }
               },
+              "deepLinkUri": {
+                "type": "string"
+              },
               "published_at": {
                 "type": "string"
               },
@@ -6599,11 +6601,9 @@
               "id",
               "name",
               "image",
-              "description",
               "population",
               "countryCode",
               "address",
-              "shortDescription",
               "type",
               "imageGallery"
             ],
@@ -6812,6 +6812,9 @@
                   "type": "string"
                 }
               },
+              "deepLinkUri": {
+                "type": "string"
+              },
               "published_at": {
                 "type": "string"
               },
@@ -6828,11 +6831,9 @@
               "id",
               "name",
               "image",
-              "description",
               "population",
               "countryCode",
               "address",
-              "shortDescription",
               "type",
               "imageGallery"
             ],
@@ -7013,11 +7014,9 @@
               "id",
               "name",
               "image",
-              "description",
               "population",
               "countryCode",
               "address",
-              "shortDescription",
               "type",
               "imageGallery"
             ],
@@ -7314,6 +7313,9 @@
               }
             }
           },
+          "deepLinkUri": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -7364,6 +7366,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "deepLinkUri": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

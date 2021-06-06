@@ -71,6 +71,9 @@
     },
     "approval": {
       "collection": "app-user"
+    },
+    "deepLinkUri": {
+      "type": "string"
     }
   }
 }

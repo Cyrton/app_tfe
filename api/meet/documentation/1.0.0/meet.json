@@ -618,6 +618,9 @@
                   "type": "string"
                 }
               },
+              "deepLinkUri": {
+                "type": "string"
+              },
               "published_at": {
                 "type": "string"
               },
@@ -634,11 +637,9 @@
               "id",
               "name",
               "image",
-              "description",
               "population",
               "countryCode",
               "address",
-              "shortDescription",
               "type",
               "imageGallery"
             ],

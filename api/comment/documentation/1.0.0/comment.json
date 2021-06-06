@@ -585,6 +585,9 @@
                   "type": "string"
                 }
               },
+              "deepLinkUri": {
+                "type": "string"
+              },
               "published_at": {
                 "type": "string"
               },

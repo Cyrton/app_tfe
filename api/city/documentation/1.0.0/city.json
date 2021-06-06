@@ -519,11 +519,9 @@
           "id",
           "name",
           "image",
-          "description",
           "population",
           "countryCode",
           "address",
-          "shortDescription",
           "type",
           "imageGallery"
         ],
@@ -590,6 +588,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "deepLinkUri": {
+                  "type": "string"
                 },
                 "published_at": {
                   "type": "string"
@@ -810,11 +811,9 @@
       "NewCity": {
         "required": [
           "name",
-          "description",
           "population",
           "countryCode",
           "address",
-          "shortDescription",
           "type"
         ],
         "properties": {
